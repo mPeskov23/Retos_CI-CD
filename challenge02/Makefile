@@ -5,8 +5,8 @@ TEST_TARGET=test_challenge02
 
 all: $(TARGET)
 
-$(TARGET): starter.c
-	$(CC) $(CFLAGS) -o $(TARGET) starter.c
+$(TARGET): starter.c main.c
+	$(CC) $(CFLAGS) -o $(TARGET) starter.c main.c
 
 test: starter.c test_challenge02.c
 	$(CC) $(CFLAGS) -o $(TEST_TARGET) starter.c test_challenge02.c
